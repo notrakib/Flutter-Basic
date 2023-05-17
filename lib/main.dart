@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var currentScreen = "first-screen";
-  var answerList = [];
+  List<String> answerList = [];
   var currentQues = 0;
 
   void changeQues() {
@@ -51,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void handleAnswer(String ans) {
     answerList.add(ans);
-    print(answerList);
   }
 
   void changeScreen() {
@@ -70,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   handleAnswer: handleAnswer,
                   changeQues: changeQues,
                   currentQues: currentQues)
-              : const ResultScreen(),
+              : ResultScreen(answerList),
     );
   }
 }
