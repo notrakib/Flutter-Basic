@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './data/questions.dart';
+import 'data/questions.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen(

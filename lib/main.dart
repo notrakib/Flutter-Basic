@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './firstScreen.dart';
 import './secondScreen.dart';
 import './result.dart';
-import './data/questions.dart';
+import 'data/questions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,10 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void changeQues() {
     setState(() {
-      if (currentQues < questions.length - 1) {
+      if (currentQues + 1 < questions.length) {
         currentQues++;
-      }
-      if (currentQues == questions.length - 1) {
+      } else if (currentQues + 1 == questions.length) {
         currentScreen = "result-screen";
       } else {
         return;
